@@ -10,15 +10,25 @@ export default class Login extends React.Component {
 
         this.state = {
             user: '',
-            password: ''
+            password: '',
+            message: ''
         };
     }
 
     login(e) {
         e.preventDefault();
+        let instance = this;
 
         Auth.login(this.state.user, this.state.password).catch(function(err) {
-            console.log("Error logging in ", err);
+            if(err) {
+                let error = JSON.parse(err.response)
+                instance.setState({
+                    name: '',
+                    email: '',
+                    message: error.message
+                });
+                return
+            }
         });
     }
 
@@ -30,6 +40,7 @@ export default class Login extends React.Component {
                   <input type="password" valueLink={this.linkState('password')} placeholder="Password" />
                 </div>
                 <button type="submit" onClick={this.login.bind(this)}>Submit</button>
+                <span className="error">{this.state.message == null ? '' : this.state.message}</span>
             </form>
         );
     }

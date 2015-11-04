@@ -23,33 +23,10 @@ class AuthService {
             data: JSON.stringify(body)
         }))
         .then(function(response) {
-            console.log(response);
+            localStorage.setItem("token", response.token);
+            return true;
         });
     }
-
-    /*createToken() {
-        return when(request({
-            url: 'https://api.github.com/authorizations',
-            method: 'POST',
-            type: 'json',
-            crossOrigin: true,
-            headers: {
-                "Authorization": "Basic " + btoa(this.username + ":" + this.password)
-            },
-            data: {
-                "scopes": [
-                    "user",
-                    "repo"
-                ],
-                "note": "An authorization code for Orbit",
-                "client_id": "552edb255a764318b892",
-                "client_secret": "15baff442ffce207014e27be10e8d6ad1159ea7c"
-            }
-        }))
-        .then(function(response) {
-            console.log(response);
-        });
-    }*/
 }
 
 export default new AuthService()
