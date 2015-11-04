@@ -1,5 +1,5 @@
 <p align="center">
-	<img src="/../readme/orbit.jpg" />
+	<img src="https://github.com/jvhoven/orbit/blob/readme/orbit.jpg" />
 </p>
 <p align="center">
 	<i>Enter spaceous clearance</i>
@@ -14,5 +14,5 @@ The main focus lies on Github integration, this will allow you to manage your re
 
 <br /><br />
 <p align="center">
-	<img src="/../readme/orbit-preview.jpg" />
+	<img src="https://github.com/jvhoven/orbit/blob/readme/orbit-preview.jpg" />
 </p>
