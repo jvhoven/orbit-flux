@@ -1,5 +1,6 @@
 import request from 'reqwest'
 import when from 'when'
+import config from '../../../config'
 
 class AuthService {
 
@@ -8,7 +9,7 @@ class AuthService {
             scopes: [
                 "public_repo"
             ],
-            client_secret: "15baff442ffce207014e27be10e8d6ad1159ea7c",
+            client_secret: config.secret,
             note: "Authorization key for PMS Orbit"
         }
 

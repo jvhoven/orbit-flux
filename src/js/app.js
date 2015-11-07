@@ -4,6 +4,7 @@ import { Router, Route, Link } from 'react-router'
 import Login from './pages/login'
 import Settings from './pages/settings'
 
+// Initialize router
 render((
   <Router>
     <Route path="/" component={Login} />
