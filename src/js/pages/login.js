@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactMixin from 'react-mixin'
 import LinkedStateMixin from 'react-addons-linked-state-mixin'
-import Auth from './../services/AuthService'
+import Auth from './../services/auth'
 
 export default class Login extends React.Component {
 
