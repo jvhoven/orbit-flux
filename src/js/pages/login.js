@@ -30,6 +30,9 @@ export default class Login extends React.Component {
                 return
             }
         });
+
+        console.log("MEUI");
+        window.location.href = "/settings";
     }
 
     render() {

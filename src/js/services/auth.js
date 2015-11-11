@@ -24,7 +24,11 @@ class AuthService {
             data: JSON.stringify(body)
         }))
         .then(function(response) {
-            localStorage.setItem("token", response.token);
+            let user = {
+                username: username,
+                token: response.token
+            }
+            localStorage.setItem("user", JSON.stringify(user));
             return true;
         });
     }
